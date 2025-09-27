@@ -1,59 +1,116 @@
-# BookManagementApp
+#  Book Management App
+ 
+A responsive, full-featured **Book Management App** built with Angular. This app allows users to view, search, add, edit, and delete books in a clean, intuitive interface. Designed for both desktop and mobile users.  
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.2.
+---
 
-## Development server
+##  Features
 
-To start a local development server, run:
+- **View Books:** Paginated list of books with search functionality.  
+- **Add Book:** Add a new book with validation for required fields.  
+- **Edit Book:** Update existing book details using a modal form.  
+- **Delete Book:** Remove books with confirmation.  
+- **Responsive Design:** Works on desktop, tablet, and mobile devices.  
+- **Pagination:** Easily navigate through large lists of books.  
+- **Local Mock Data:** Uses a BehaviorSubject to manage book data locally (no backend required).  
+
+
+
+##  Technology Stack
+
+- **Framework:** Angular 20  
+- **Language:** TypeScript  
+- **Styling:** CSS / Tailwind (optional)  
+- **Reactive Forms:** Angular ReactiveFormsModule  
+- **State Management:** BehaviorSubject for local data handling  
+- **Routing:** Angular Router  
+
+---
+
+##  Installation
+
+1. Clone the repository:
 
 ```bash
+git clone https://github.com/sagarmary/book-management-app
+
+
+Navigate to the project directory:
+
+cd book-management-app
+
+
+Install dependencies:
+
+npm install
+
+
+Run the app:
+
 ng serve
-```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
 
-## Code scaffolding
+Open your browser and go to:
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+http://localhost:4200
 
-```bash
-ng generate component component-name
-```
+Usage
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+Home Page:
 
-```bash
-ng generate --help
-```
+Displays a welcome message and navigation buttons.
 
-## Building
+Books Page:
 
-To build the project run:
+View all books in a paginated table.
 
-```bash
-ng build
-```
+Search books by title using the search bar.
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+Edit or delete books using action buttons.
 
-## Running unit tests
+Add Book Page:
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+Fill in the form with title, author, price, and description.
 
-```bash
-ng test
-```
+Submit to add a new book.
 
-## Running end-to-end tests
+All data is handled locally in the app; no external API is required.
 
-For end-to-end (e2e) testing, run:
+🔧 Folder Structure
+src/
+│
+├─ app/
+│  ├─ components/
+│  │  ├─ home/          # Home page component
+│  │  ├─ books/         # Books list component
+│  │  └─ add-book/      # Add book component
+│  │
+│  ├─ models/
+│  │  └─ model.ts       # Book interface
+│  │
+│  ├─ services/
+│  │  └─ bookservice.ts # BookService with CRUD methods
+│  │
+│  └─ app.module.ts
+│
 
-```bash
-ng e2e
-```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+Key Highlights
 
-## Additional Resources
+Clean component-based architecture.
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Reactive forms with validation for all fields.
+
+Local state management using BehaviorSubject ensures smooth updates.
+
+Fully responsive layout for mobile and desktop.
+
+Easy to extend for backend integration in the future.
+
+->Future Enhancements
+
+Integrate a backend API for persistent data storage.
+
+Add user authentication for secured operations.
+
+Implement filter by author, price range, or rating.

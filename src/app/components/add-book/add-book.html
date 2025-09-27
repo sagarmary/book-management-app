@@ -1,0 +1,41 @@
+<div class="add-book-container">
+  <h2>Add New Book</h2>
+  <form [formGroup]="addForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label>Title</label>
+      <input formControlName="title" />
+      <div *ngIf="submitted && f['title'].errors" class="error">
+        Title is required
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>Author</label>
+      <input formControlName="author" />
+      <div *ngIf="submitted && f['author'].errors" class="error">
+        Author is required
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>Price</label>
+      <input type="number" formControlName="price" />
+      <div *ngIf="submitted && f['price'].errors" class="error">
+        Price must be valid and >= 0
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>Description</label>
+      <textarea formControlName="description"></textarea>
+      <div *ngIf="submitted && f['description'].errors" class="error">
+        Description is required
+      </div>
+    </div>
+
+    <div class="form-actions">
+      <button type="submit" class="btn-save">Add Book</button>
+      <button type="reset" class="btn-cancel">Reset</button>
+    </div>
+  </form>
+</div>
