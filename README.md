@@ -20,7 +20,7 @@ A responsive, full-featured **Book Management App** built with Angular. This app
 
 - **Framework:** Angular 20  
 - **Language:** TypeScript  
-- **Styling:** CSS / Tailwind (optional)  
+- **Styling:** CSS  
 - **Reactive Forms:** Angular ReactiveFormsModule  
 - **State Management:** BehaviorSubject for local data handling  
 - **Routing:** Angular Router  
@@ -76,23 +76,19 @@ Submit to add a new book.
 
 All data is handled locally in the app; no external API is required.
 
-🔧 Folder Structure
-src/
-│
-├─ app/
-│  ├─ components/
-│  │  ├─ home/          # Home page component
-│  │  ├─ books/         # Books list component
-│  │  └─ add-book/      # Add book component
-│  │
-│  ├─ models/
-│  │  └─ model.ts       # Book interface
-│  │
-│  ├─ services/
-│  │  └─ bookservice.ts # BookService with CRUD methods
-│  │
-│  └─ app.module.ts
-│
+Folder Structure
+Book-Management-App/
+├─ src/app/components/
+│ ├─ home/
+│ ├─ books/
+│ └─ add-book/
+├─ src/app/services/
+│ └─ bookservice.ts
+├─ src/app/models/
+│ └─ model.ts
+├─ src/app/app.component.
+├─ public/images/
+└─ README.md
 
 
 Key Highlights
